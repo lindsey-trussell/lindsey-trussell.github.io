@@ -22,20 +22,14 @@ nav {
     display: flex;
   }
   
-  nav dl {
+  nav ul {
     padding: 0;
     list-style-type: none;
     flex: 2;
     display: flex;
   }
   
-  nav dt {
-    display: inline-block;
-    text-align: center;
-    flex: 1;
-  }
-
-  nav dd {
+  nav li {
     display: inline-block;
     text-align: center;
     flex: 1;

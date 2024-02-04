@@ -6,20 +6,18 @@ html, body {
   }
   
   body {
-    width: 70%;
+    width: 75%;
     min-width: 800px;
     margin: 0 auto;
   }
 
 header {
 margin-bottom: 10px;
-display: flex;
-flex-flow: row wrap;
 }
 
 /* table of contents */
 nav {
-    height: 50px;
+    height: 65px;
     flex: 100%;
     display: flex;
   }
@@ -32,16 +30,18 @@ nav {
   }
   
   nav dt {
-    display: inline;
+    display: inline-block;
     text-align: center;
     flex: 1;
   }
 
   nav dd {
-    display: inline;
+    display: inline-block;
     text-align: center;
     flex: 1;
   }
+
+/* image aside */
 
 aside {
     flex: 1;
@@ -52,9 +52,10 @@ aside {
   aside a {
     display: block;
     float: right;
-    width: 25%;
+    width: 20%;
   }
 
   aside img {
     max-width: 100%;
+    padding: 5%;
   }

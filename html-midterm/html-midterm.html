@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
 <head>
+    <style>
+        div {text-align: center;}
+    </style>
     <title>Error-Filled Page</title>
 <body>
     <h1>Welcome to My Error-Filled Page</h1>
@@ -44,21 +46,23 @@
     
     <img src="error.jpeg" alt="Error Image">
 
-    <p align="center">This is centered text.</p>
+    <div>
+        <p>This is centered text.</p>
+    </div>
 
-    <p background-color="lightgray">Text</p>
+    <p>Text</p>
 
     <input type="button" value="Click me">
 
     <!-- This is an unclosed comment-->
 
-    <a href="#">Link without closing tag
+    <a href="#">Link without closing tag</a>
 
-    <p><em>Underlined text</p></em>
+    <p><u>Underlined text</u></p>
 
     <dl>
-        <li>Descriptive Item Title</li>
-        <li>Descriptive Item Text</li>
+        <dt>Descriptive Item Title</dt>
+        <dd>Descriptive Item Text</dd>
     </dl>
 </body>
 </html>
@@ -74,13 +78,13 @@
 8. link closed with image tag, replaced </img> with </a>
 9. table missing closing tag, added </table>
 10. image source attribute not spelled right, corrected to src
-11. <center> not supported in html 5, replaced with <p align="center"></p>
-12. bgcolor not recognised, changed to background-color
-13. 
-14. 
-15. 
-16. comment without closing tag, added closing tag
-17. 
+11. <center> not supported in html 5, replaced with css in div class
+12. bgcolor not recognised or supported, attribute removed
+13. comment without closing tag, added closing tag
+14. link without closing tag, added closing tag
+15. <em> and <p> tags out of order, reordered tags
+16. wrong tag used for underline, changed from <em> to <u>
+17. wrong item types given for descirptive list, changed <li> elements to <dt> and <dd>
 18. 
 19. 
 20. 

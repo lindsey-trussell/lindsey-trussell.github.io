@@ -1,0 +1,159 @@
+  /* general styling */
+  html{
+    font-family: "bookmania", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  body {
+    margin: 0;
+    background: black;
+  }
+  article {
+    width: 500px;
+    height: 500px;
+    margin: 20px auto;
+    position: relative;
+    background: no-repeat bottom url("/img/background1.jpg");
+    filter: blur(.5px) sepia(15%);
+  }
+  div{
+    color: lightblue;
+    margin: 20px;
+  }
+
+  /* visa/mastercard styling */
+  .visa-mastercard{
+    position: absolute;
+    width: 90px;
+    margin: 30px;
+    top: 5px;
+  }
+  .visa-mastercard img{
+    max-width: 100%;
+  }
+  /* title styling */
+  .title {
+    width: 250px;
+    font-size: 46px;
+    line-height: 30px;
+    margin: 20px;
+    position: absolute;
+    top: 60px;
+    filter: drop-shadow(5px 5px 2px rgba(0,0,0,1));
+    transform: rotate(-15deg);
+  }
+  .title p {
+    margin: 3%;
+  }
+  .Romance{
+    font-feature-settings: 'ss10', 'ss17';
+  }
+  .is{
+    font-feature-settings: 'ss14';
+    font-size: 34px;
+  }
+  .Boring{
+    font-feature-settings: 'ss10';
+  }
+
+/* vertical scroll styling */
+  .vertical-scroll{
+    width: 250px;
+    height: 440px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    margin: 10px;
+    overflow: hidden;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,1));
+  }
+  .vertical-scroll li{
+    line-height: 16px;
+    margin: 20px;
+    font-size: 14px;
+  }
+  .vertical-scroll p{
+    margin: 0;
+    padding: 0;
+  }
+  .vertical-scroll-text{
+    height: 100%;
+    transform: translateY(200%);
+    animation: vertical-scroll-animation 20s linear infinite;
+  }
+  .vertical-scroll-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    filter: hue-rotate() drop-shadow(1px 1px 1px rgba(0,0,0,1));
+  }
+
+  /* buy now styling */
+  .buy-now {
+    font-size: 40px;
+    margin: 20px;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    filter: drop-shadow(5px 5px 2px rgba(0,0,0,1));
+    animation: flash 1.5s linear infinite;
+  }
+
+  /* horizontal scroll styling */
+  .horizontal-scroll{
+    width: 220px;
+    height: 220px;
+    margin: 20px;
+    position: absolute;
+    bottom: 80px;
+    left: 20px;
+    overflow: hidden;
+    filter: drop-shadow(5px 5px 2px rgba(0,0,0,1));
+  }
+  .horizontal-scroll img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+  .horizontal-scroll p{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 150px;
+    height: 20px;
+    filter: drop-shadow(1px 1px .5px rgba(0,0,0,1));
+    transform: translateX(100%);
+    animation: horizontal-scroll-animation 5s linear infinite;
+    white-space: nowrap;
+  }
+  /* Animation styling */
+  @keyframes flash{ 
+    0%{ 
+      opacity: 0; 
+    } 
+    50%{ 
+      opacity: 1; 
+    } 
+    100%{ 
+      opacity: 0; 
+    } 
+  }
+  @keyframes vertical-scroll-animation {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(-200%);
+    }
+  }
+  @keyframes horizontal-scroll-animation {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}

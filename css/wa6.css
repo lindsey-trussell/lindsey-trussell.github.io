@@ -33,24 +33,24 @@
   }
   /* title styling */
   .title {
-    width: 250px;
-    font-size: 46px;
+    width: 300px;
+    font-size: 36px;
     line-height: 30px;
-    margin: 20px;
+    margin: 5px;
     position: absolute;
     top: 60px;
     filter: drop-shadow(5px 5px 2px rgba(0,0,0,1));
     transform: rotate(-15deg);
   }
-  .title p {
-    margin: 3%;
+  .title h1{
+    margin: 5%;
   }
   .Romance{
     font-feature-settings: 'ss10', 'ss17';
   }
   .is{
     font-feature-settings: 'ss14';
-    font-size: 34px;
+    font-size: 40px;
   }
   .Boring{
     font-feature-settings: 'ss10';
@@ -126,7 +126,7 @@
     height: 20px;
     filter: drop-shadow(1px 1px .5px rgba(0,0,0,1));
     transform: translateX(100%);
-    animation: horizontal-scroll-animation 5s linear infinite;
+    animation: horizontal-scroll-animation 3s linear infinite;
     white-space: nowrap;
   }
   /* Animation styling */

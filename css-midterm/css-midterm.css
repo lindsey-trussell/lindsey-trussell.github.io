@@ -22,7 +22,7 @@ h1{
     margin-bottom: 0;
     padding-bottom: 0;
 }
-h1, h2, .header, h4, .button{
+h1, h2, .header, h4, .button, .title{
     text-align: center;
     font-family: "bookmania", serif;
     font-weight: 100px;
@@ -55,7 +55,7 @@ nav a{
 nav a:hover{
     color:#1B998B;
 }
-h4{
+h4, .title{
     font-size: 24px;
     transition: color .25s;
 }
@@ -100,7 +100,14 @@ h4:hover{
     border-radius: 3px;
     max-width: 80px;
     max-height: 40px;
+    margin-right: 0px;
     padding: 10px;
+    transition: background-color .5s, color .5s, border .5s;
+}
+.button:hover{
+    background-color: black;
+    border: 1px solid white;
+    color: white;
 }
 
 input, .desc {

@@ -22,7 +22,7 @@ h1{
     margin-bottom: 0;
     padding-bottom: 0;
 }
-h1, h2, .header, h4, .button, .title{
+h1, h2, .header, h4, .button, .title, label{
     text-align: center;
     font-family: "bookmania", serif;
     font-weight: 100px;
@@ -66,7 +66,7 @@ h4:hover{
 /* article styling */
 .event{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr ;
+    grid-template-columns: 2fr 4fr 1fr ;
     grid-template-rows: repeat(2, auto);
     grid-auto-flow: row;
     justify-content: space-evenly;
@@ -110,27 +110,79 @@ h4:hover{
     color: white;
 }
 
-input, .desc {
-    display: none;
-  }
-  
-  /*position the label*/
-  label {
+label {
     position: relative;
     display: block;
     cursor: pointer;
-  }
+}
   
-  /*show the submenu when input is checked*/
-  input:checked~.desc {
+input, #desc1 {
+    display: none;
+}
+  
+input:checked~#desc1 {
     display: block;
-  }
+}
 
+input, #desc2 {
+    display: none;
+}
+  
+input:checked~#desc2 {
+    display: block;
+}
+
+input, #desc3 {
+    display: none;
+}
+  
+input:checked~#desc3 {
+    display: block;
+}
+
+input, #desc4 {
+    display: none;
+}
+  
+input:checked~#desc4 {
+    display: block;
+}
+
+input, #desc5 {
+    display: none;
+}
+  
+input:checked~#desc5 {
+    display: block;
+}
+
+input, #desc6 {
+    display: none;
+}
+  
+input:checked~#desc6 {
+    display: block;
+}
+
+input, #desc7 {
+    display: none;
+}
+  
+input:checked~#desc7 {
+    display: block;
+}
 .popup {
     grid-column: 1;
     grid-row: 1;
   }
   
+input, #desc8 {
+    display: none;
+}
+  
+input:checked~#desc8 {
+    display: block;
+}
 .popuptext {
     visibility: hidden;
     background-color: black;

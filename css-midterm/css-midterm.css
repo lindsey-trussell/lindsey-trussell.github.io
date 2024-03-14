@@ -79,15 +79,13 @@ h4:hover{
     padding: 20px;
     font-size: 20px;
 }
-.desc{
-    text-align: left;
-}
 .date{
     grid-column: 1;
     grid-row: 2;
 }
 
 .desc{
+    text-align: left;
     grid-column: 2;
     grid-row: 2;
 

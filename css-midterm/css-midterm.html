@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/una7xwr.css">
     <link rel="stylesheet" href="css-midterm.css">
-    <script>
-        function popupFunction() {
-          var popup = document.getElementById("popup-desc");
-          popup.classList.toggle("show");
-        }
-        </script>
     <title>css midterm</title>
 </head>
 <body>
@@ -37,20 +31,23 @@
             </li>
         </ul>
     </nav>
+    <h3 class="site-desc">
+        Our 2022/23 Season promises to be an imaginative and spectacular journey through
+        some of the best music ever composed.
+        We're delighted to present to you a season brimming with extraordinary talent and
+        exciting repertoire that we hope will ignite your imagination. The Colorado
+        Symphony is committed to bringing the best in live, symphonic music to an eclectic
+        and ever-growing audience, and we're well positioned to embark on an exciting path
+        forward in the years to come.
+    </h3>
     <article>
-        <h3>
-            Our 2022/23 Season promises to be an imaginative and spectacular journey through
-            some of the best music ever composed.
-            We're delighted to present to you a season brimming with extraordinary talent and
-            exciting repertoire that we hope will ignite your imagination. The Colorado
-            Symphony is committed to bringing the best in live, symphonic music to an eclectic
-            and ever-growing audience, and we're well positioned to embark on an exciting path
-            forward in the years to come.
-        </h3>
-            <div class="event">
-                <div class="popup" onclick="popupFunction()"> 
-                    <h4>Vivaldi's The Four Seasons</h4>
-                    <div class="popuptext" id="popup-desc">
+            <div class="event-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3 class="title">Vivaldi's The Four Seasons</h3>
+                        <div class="date">OCT 14-16 FRI-SAT 7:30 SUN 1:00</div>
+                    </div>
+                    <div class="card-back">
                         <div>
                         Symphonic bliss awaits you as your Colorado Symphony and guest conductor Aram Demirjian present a
                         powerhouse program highlighted by Vivaldi's programmatic masterpiece, <em>The Four Seasons</em>. As striking
@@ -65,69 +62,74 @@
                         movement, and American folk expressions in an ecstatic celebration that will have you on the edge of
                         your seat.
                         </div>
+                        <div class="lists">
+                            <div class="artists">
+                                <div class="header">Featured Artists</div>
+                                <ul>
+                                    <li>Aram Demirjian, conductor</li>
+                                    <li>Paul Huang, violin</li>
+                                </ul>
+                            </div>
+                            <div class="repertoire">
+                                <div class="header">Repertoire</div>
+                                <ul>
+                                    <li>JESSIE MONTGOMERY Strum</li>
+                                    <li>VIVALDI The Four Seasons, Op. 8, No. 1-4</li>
+                                    <li>TCHAIKOVSKY Symphony No. 4 in F minor, Op. 36</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="button">Tickets</div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3 class="title">Beethoven Symphony No. 3 with Peter Oundjian</h3>
+                        <div class="date">NOV 4-6 FRI-SAT 7:30 SUN 1:00</div>
+                    </div>
+                    <div class="card-back">
+                        History is replete with turning points and with the completion of his revolutionary Third Symphony,
+                        Beethoven forever changed the idea of what a symphony could be. A clear bridging of the Classical and
+                        Romantic eras, the Eroica (“Heroic”) Symphony explores what it means to be human in a work that is
+                        larger and more emotional than a symphony had ever been before. In it, Beethoven's passion rises to the
+                        forefront, using broad strokes of sound to convey the very nature of humanity, while reimagining a future
+                        for music filled with endless possibility. Cellist Sterling Elliott — a 2021 Avery Fisher Career Grant
+                        recipient — brings youthful energy to Elgar's Cello Concerto, a deeply emotional work filled with soaring
+                        themes and quiet anguish that will leave audiences entranced. The Colorado Symphony Chorus takes
+                        center stage on Vaughan Williams'Walt Whitman-inspired <em>Toward the Unknown Region</em>, a remarkable
+                        marriage of music and text, with Williams'inspired music perfectly encapsulating Whitman's noble,
+                        humanistic aspirations. These works will spring to life in the hands of Maestro Peter Oundjian and your
+                        Colorado Symphony.
                         <div class="artists">
                             <div class="header">Featured Artists</div>
                             <ul>
-                                <li>Aram Demirjian, conductor</li>
-                                <li>Paul Huang, violin</li>
+                                <li>Peter Oundjian, conductor</li>
+                                <li>Sterling Elliott, cello</li>
+                                <li>Colorado Symphony Chorus, Duain Wolfe, director</li>
                             </ul>
                         </div>
                         <div class="repertoire">
                             <div class="header">Repertoire</div>
                             <ul>
-                                <li>JESSIE MONTGOMERY Strum</li>
-                                <li>VIVALDI The Four Seasons, Op. 8, No. 1-4</li>
-                                <li>TCHAIKOVSKY Symphony No. 4 in F minor, Op. 36</li>
+                                <li>VAUGHAN WILLIAMS <em>Toward the Unknown Region</em></li>
+                                <li>ELGAR Cello Concerto in E minor, Op. 85</li>
+                                <li>BEETHOVEN Symphony No. 3 in E-flat major, Op. 55 “Eroica”</li>
                             </ul>
                         </div>
+                        <div class="button">Tickets</div>
                     </div>
                 </div>
-                <div class="date">OCT 14-16 FRI-SAT 7:30 SUN 1:00</div>
-                <div class="button">Tickets</div>
             </div>
-            <div class="event">
-                <h3 class="title">Beethoven Symphony No. 3 with Peter Oundjian</h3>
-                <div class="date">NOV 4-6 FRI-SAT 7:30 SUN 1:00</div>
-                <input class="check" id="check1" type="checkbox">
-                <label for="check1">Description</label>
-                <div class="desc" id="desc1">
-                    History is replete with turning points and with the completion of his revolutionary Third Symphony,
-                    Beethoven forever changed the idea of what a symphony could be. A clear bridging of the Classical and
-                    Romantic eras, the Eroica (“Heroic”) Symphony explores what it means to be human in a work that is
-                    larger and more emotional than a symphony had ever been before. In it, Beethoven's passion rises to the
-                    forefront, using broad strokes of sound to convey the very nature of humanity, while reimagining a future
-                    for music filled with endless possibility. Cellist Sterling Elliott — a 2021 Avery Fisher Career Grant
-                    recipient — brings youthful energy to Elgar's Cello Concerto, a deeply emotional work filled with soaring
-                    themes and quiet anguish that will leave audiences entranced. The Colorado Symphony Chorus takes
-                    center stage on Vaughan Williams'Walt Whitman-inspired <em>Toward the Unknown Region</em>, a remarkable
-                    marriage of music and text, with Williams'inspired music perfectly encapsulating Whitman's noble,
-                    humanistic aspirations. These works will spring to life in the hands of Maestro Peter Oundjian and your
-                    Colorado Symphony.
-                    <div class="artists">
-                        <div class="header">Featured Artists</div>
-                        <ul>
-                            <li>Peter Oundjian, conductor</li>
-                            <li>Sterling Elliott, cello</li>
-                            <li>Colorado Symphony Chorus, Duain Wolfe, director</li>
-                        </ul>
-                    </div>
-                    <div class="repertoire">
-                        <div class="header">Repertoire</div>
-                        <ul>
-                            <li>VAUGHAN WILLIAMS <em>Toward the Unknown Region</em></li>
-                            <li>ELGAR Cello Concerto in E minor, Op. 85</li>
-                            <li>BEETHOVEN Symphony No. 3 in E-flat major, Op. 55 “Eroica”</li>
-                        </ul>
-                    </div>
+            <div class="event-card">
+                <div class="card-front">
+                    <h3 class="title">Tchaikovsky Piano Concerto No. 1 with Olga Kern</h3>
+                    <div class="date">DEC 2-4 FRI-SAT 7:30 SUN 1:00</div>
                 </div>
-                <div class="button">Tickets</div>
-            </div>
-            <div class="event">
-                <h3 class="title">Tchaikovsky Piano Concerto No. 1 with Olga Kern</h3>
-                <div class="date">DEC 2-4 FRI-SAT 7:30 SUN 1:00</div>
                 <input class="check" id="check2" type="checkbox">
-                <label for="check2">Description</label>
-                <div class="desc" id="desc2">
+                <label for="check2" class="header">Description</label>
+                <div class="card-back" id="desc2">
                     Peter Ilyich Tchaikovsky — so highly regarded for his symphonic compositions — placed himself among
                     the greats of the keyboard with the completion of his First Piano Concerto. The work is filled with
                     towering grandeur, gorgeously lyrical melodies, and unmistakable Romantic spirit. For pianists what
@@ -156,12 +158,14 @@
                 </div>
                 <div class="button">Tickets</div>
             </div>
-            <div class="event">
-                <h3 class="title">Ravel's Daphnis et Chloé</h3>
-                <div class="date">JAN 13-15 FRI-SAT 7:30 SUN 1:00</div>
-                <input class="check" id="check3" type="checkbox">
-                <label for="check3">Description</label>
-                <div class="desc" id="desc3">
+            <div class="event-card">
+                <div class="card-front">
+                    <h3 class="title">Ravel's Daphnis et Chloé</h3>
+                    <div class="date">JAN 13-15 FRI-SAT 7:30 SUN 1:00</div>
+                </div>
+                    <input class="check" id="check3" type="checkbox">
+                <label for="check3" class="header">Description</label>
+                <div class="card-back" id="desc3">
                     Be still my heart! A whirling celebration of pagan love awaits listeners with Ravel's <em>Daphnis et Chloé</em>,
                     which he called a “symphonie chorégraphique” rather than a ballet, reflecting a sense of powerful,
                     dramatic music which defies category and springs to life on terms all its own. Ravel's exceptional score
@@ -193,12 +197,14 @@
                 </div>
                 <div class="button">Tickets</div>
             </div>
-            <div class="event">
-                <h3 class="title">Beethoven Symphony No. 8</h3>
-                <div class="date">FEB 10-12 FRI-SAT 7:30 SUN 1:00</div>
+            <div class="event-card">
+                <div class="card-front">
+                    <h3 class="title">Beethoven Symphony No. 8</h3>
+                    <div class="date">FEB 10-12 FRI-SAT 7:30 SUN 1:00</div>
+                </div>
                 <input class="check" id="check4" type="checkbox">
-                <label for="check4">Description</label>
-                <div class="desc" id="desc4">
+                <label for="check4" class="header">Description</label>
+                <div class="card-back" id="desc4">
                     Beethoven's Eighth — which he referred to as “my little Symphony in F,”— is the most cheery, joyful,
                     and experimental of his symphonies. Its relatively compact scale allowed Beethoven to be more
                     imaginative and structurally radical than he could dare to be on the larger canvases of his other
@@ -233,12 +239,14 @@
                 </div>
                 <div class="button">Tickets</div>
             </div>
-            <div class="event">
-                <h3 class="title">Beethoven's Emperor Concerto</h3>
-                <div class="date">February 24-26 FRI-SAT 730 SUN 1</div>
+            <div class="event-card">
+                <div class="card-front">
+                    <h3 class="title">Beethoven's Emperor Concerto</h3>
+                    <div class="date">February 24-26 FRI-SAT 730 SUN 1</div>
+                </div>
                 <input class="check"  id="check5" type="checkbox">
-                <label for="check5">Description</label>
-                <div class="desc" id="desc5">
+                <label for="check5" class="header">Description</label>
+                <div class="card-back" id="desc5">
                     One of the most accomplished of all piano works, Beethoven's “Emperor” Concerto features a striking
                     opening movement and a glorious finale, with beauty and virtuosic style throughout that makes it one of
                     the composer's best. Your Colorado Symphony welcomes electrifying pianist Stewart Goodyear who is
@@ -267,12 +275,14 @@
                 </div>
                 <div class="button">Tickets</div>
             </div>
-            <div class="event">
-                <h3 class="title">Bartók Concerto for Orchestra</h3>
-                <div class="date">March 10th-12th FRI-SAT 7:30 SUN 1:00</div>
+            <div class="event-card">
+                <div class="card-front">
+                    <h3 class="title">Bartók Concerto for Orchestra</h3>
+                    <div class="date">March 10th-12th FRI-SAT 7:30 SUN 1:00</div>
+                </div>
                 <input class="check" id="check6" type="checkbox">
-                <label for="check6">Description</label>
-                <div class="desc" id="desc6">
+                <label for="check6" class="header">Description</label>
+                <div class="card-back" id="desc6">
                     One of the foremost conductors of his generation, Alexander Shelley joins your Colorado Symphony for a
                     program that will leave you simply spellbound. Spanish composer Joaquín Rodrigo's classical guitar
                     concerto <em>Concierto de Aranjuez</em> fills the concert hall with the immortal sounds and traditions of Spanish
@@ -300,12 +310,14 @@
                 </div>
                 <div class="button">Tickets</div>
             </div>
-            <div class="event">
-                <h3 class="title">Brahms Requiem with Peter Oundjian</h3>
-                <div class="date">Mar 24-26 FRI-SAT 7:30 SUN 1:00</div>
+            <div class="event-card">
+                <div class="card-front">
+                    <h3 class="title">Brahms Requiem with Peter Oundjian</h3>
+                    <div class="date">Mar 24-26 FRI-SAT 7:30 SUN 1:00</div>
+                </div>
                 <input class="check" id="check7" type="checkbox">
-                <label for="check7">Description</label>
-                <div class="desc" id="desc7">
+                <label for="check7" class="header">Description</label>
+                <div class="card-back" id="desc7">
                     Unlike other Requiem Masses, Brahms' <em>A German Requiem</em> is not primarily a Mass for the dead. Instead,
                     it is intended as comfort and solace for those left behind as they mourn the death of others. Confronting
                     life as much as it does death, Brahms further differentiates his Requiem by setting excerpts from the
@@ -341,12 +353,14 @@
                 </div>
                 <div class="button">Tickets</div>
             </div>
-            <div class="event">
-                <h3 class="title">Beethoven Violin Concerto</h3>
-                <div class="date">Apr 21-23 Fri & Sat 7:30 Sunday 1:00</div>
+            <div class="event-card">
+                <div class="card-front">
+                    <h3 class="title">Beethoven Violin Concerto</h3>
+                    <div class="date">Apr 21-23 Fri & Sat 7:30 Sunday 1:00</div>
+                </div>
                 <input class="check" id="check8" type="checkbox">
-                <label for="check8">Description</label>
-                <div class="desc" id="desc8">
+                <label for="check8" class="header">Description</label>
+                <div class="card-back" id="desc8">
                     Join your Colorado Symphony and Principal Conductor Peter Oundjian in welcoming acclaimed soloist
                     and 2021 Gramophone Artist of the Year, James Ehnes, to Boettcher Concert Hall for a reinvigoration of
                     Beethoven's majestic Violin Concerto. Beethoven's output in nearly every musical genre was prolific, yet

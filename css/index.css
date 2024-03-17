@@ -58,18 +58,67 @@ nav a{
     transition: color .25s;
 }
 nav a:hover{
-    color:#9DD1AC;
+    color:#66666E;
 }
 title{
     font-size: 24px;
     transition: color .25s;
 }
 
+/* card styling */
+.event-card{
+    background-color: transparent;
+    width: 500px;
+    height: 700px;
+    border: 1px solid white;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+    perspective: 1000px;
+}
+
+.card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.4s;
+}
+
+.card.is-flipped{
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front{
+    background-color: black;
+    color: white;
+}
+
+.card-back{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+}
+
 /* article styling */
 article{
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: row;
     place-items: center;
     justify-content: space-evenly;
@@ -89,9 +138,7 @@ article{
 .button{
     height: 40px;
     width: 100px;
-    grid-column: 3;
-    grid-row: 1;
-    align-content: end;
+    align-self: center;
     font-size: 16px;
     line-height: 2.75;
     background-color: white;
@@ -111,4 +158,8 @@ article{
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
+}
+.lists ul{
+    list-style-type: none;
+    padding: 10px;
 }

@@ -2,11 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="ica10.css">
+    <title>ica10</title>
+    <script>
+        function flip(){
+            var cards = document.querySelectorAll('.card');
+
+            [...cards].forEach((card)=>{
+            card.addEventListener( 'click', function() {
+                card.classList.toggle('is-flipped');
+            });
+            });
+        }
+        function changeColor() {
+            var gfg = document.getElementById("box2");
+            gfg.style.color = "green";
+        }
+    </script>
 </head>
-<body>
-    <p>Hello world</p>
+<body onload="flip()">
+    <article>
+        <div id="box1">
+            <div class="card">
+                <div class="card-front">
+                    <p>click to flip me</p>
+                </div>
+                <div class="card-back">
+                    <p>b*tch</p>
+                </div>
+            </div>
+        </div>
+        <div class="box2-container">
+            <div id="box2">
+                <p>click the button to make me yellow</p>
+            </div>
+            <button onclick="changeColor()">click me!</button>
+        </div>
+    </article>
 </body>
 </html>

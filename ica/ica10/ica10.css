@@ -56,6 +56,9 @@ article{
     font-size: 36px;
     text-align: center;
 }
+#box2.is-yellow{
+    color: green;
+}
 button{
     cursor: pointer;
     width: 100px;

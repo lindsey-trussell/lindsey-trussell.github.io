@@ -18,6 +18,11 @@ body {
   margin-top: 50px;
   width: 640px;
   height: 480px;
+  background-color: black;
+}
+
+.full-img img {
+  max-width: 100%;
 }
 
 .overlay {
@@ -41,7 +46,6 @@ button {
   top: 2px;
   left: 2px;
 }
-
 .thumb-bar img {
   display: block;
   width: 20%;

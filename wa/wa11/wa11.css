@@ -1,16 +1,21 @@
 h1 {
-  font-family: helvetica, arial, sans-serif;
+  font-family: "bookmania", serif;
+  font-weight: 400;
   text-align: center;
 }
 
 body {
   width: 640px;
   margin: 0 auto;
+  background-color: #081C15;
+  color: #D8F3DC;
+  
 }
 
 .full-img {
   position: relative;
   display: block;
+  margin-top: 50px;
   width: 640px;
   height: 480px;
 }
@@ -25,10 +30,12 @@ body {
 }
 
 button {
+  font-family: "bookmania", serif;
+  color: #081C15;
   border: 0;
-  background: rgba(150,150,150,0.6);
-  text-shadow: 1px 1px 1px white;
-  border: 1px solid #999;
+  background: rgba(8,28,21,0.3);
+  border: 1px solid #081C15;
+  border-radius: 5px;
   position: absolute;
   cursor: pointer;
   top: 2px;
@@ -40,4 +47,35 @@ button {
   width: 20%;
   float: left;
   cursor: pointer;
+}
+
+#ball{
+  background-color: #e4b3d0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  animation: ball-animation 5s linear infinite;
+}
+
+@keyframes ball-animation{
+    from {
+        margin: 0%;
+        background-color: #e4b3d0
+    }
+    25%{
+        background-color: #6eb4aa
+    }
+    50%{
+        margin-left: 97%;
+        background-color: #8d84bb
+    }
+    75%{
+        background-color: #b2d9f6
+    }
+    to {
+        margin: 0%;
+        background-color: #e4b3d0
+    }
 }

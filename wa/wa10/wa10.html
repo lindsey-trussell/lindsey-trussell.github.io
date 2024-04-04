@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wa10</title>
     <link rel="stylesheet" href="wa10.css">
+    <link rel="stylesheet" href="https://use.typekit.net/una7xwr.css">
 </head>
 
   <body>
@@ -26,10 +27,10 @@
         const randomise = document.getElementById('randomise');
         const story = document.getElementById('story');
   
-        var storyText = 'It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
-        var insertX = ['Willy the GoblinBig','DaddyFather','Christmas'];
-        var insertY = ['the White House','Disneyland','the soup kitchen'];
-        var insertZ = ['spontaneously combusted','melted into a puddle on the sidewalk','turned into a slug and crawled away'];
+        var storyText = 'It was 104 degrees, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Nick saw the whole thing, but was not surprised — :insertx: had always been strange, and it was a hot day.';
+        var insertX = ['Inez','Lia','Thal'];
+        var insertY = ['the street corner','the park','the garden'];
+        var insertZ = ['spontaneously combusted','disappeared into thin air','turned into a bird and flew away'];
   
         function randomValueFromArray(array){
         const random = Math.floor(Math.random()*array.length);
@@ -47,13 +48,12 @@
   
           if(customName.value != '') {
               var name = customName.value;
-              newStory =  newStory.replace('Bob',name);
+              newStory =  newStory.replace('Nick',name);
           }
   
           if(document.getElementById("uk").checked) {
-              var weight = Math.round(300*0.07).toString() + ' stone';
-              var temperature =  Math.round((94-32)/1.8).toString() + ' centigrade';
-              newStory =  newStory.replace('94 fahrenheit',temperature).replace('300 pounds',weight);
+              var temperature =  Math.round((94-32)/1.8).toString();
+              newStory =  newStory.replace('104',temperature);
           }
   
           story.textContent = newStory;

@@ -12,7 +12,7 @@ let answer = '';
 async function newQuote(){
     console.log("quote works");
     try{
-        const response = await fetch('https://trivia.cyberwisp.com/getrandomchristmasquestion');
+        const response = await fetch('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=TYF4V2I58xEFOuhDjf486l7OHsO6ojew');
         const quote = await response.json();
 
         if(!response.ok){

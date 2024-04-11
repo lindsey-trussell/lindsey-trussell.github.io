@@ -71,7 +71,7 @@ html {
     display: block;
     color: #081C15;
     border: 1px solid #081C15;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     padding: 10px;
     text-align: center;
@@ -96,6 +96,14 @@ html {
   
   .link:hover {
     background-color: #8d84bb;
+  }
+
+  .added{
+    color: #D8F3DC;
+    font-size: 18px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
   }
 
   @media screen and (max-width: 600px) {

@@ -1,7 +1,14 @@
 html {
     width: 100%;
     height: inherit;
-    background: white;
+    background-color: black;
+    color: white;
+  }
+
+  .header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
   
   canvas {

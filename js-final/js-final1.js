@@ -19,7 +19,8 @@ function getCardName(suit, card_no){
     }
 };
 
-function drawCards(){
+function shuffleCards(){
+    
 
 }
 

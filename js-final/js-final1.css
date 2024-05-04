@@ -1,15 +1,51 @@
 body {
     background-color: #081C15;
     color: #D8F3DC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 h1 {
     font-family: "bookmania", serif;
     text-align: center;
+    margin: 10px;
 }
-
-.card-container{
+h2{
+    margin-top: -5px;
+}
+button{
+    font-family: "bookmania", serif;
+    font-size: 16px;
+    padding: 10px;
+    margin: 30px;
+    background-color: #081C15;
+    color: #D8F3DC;
+    border: solid 1px #D8F3DC;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .5s, color .5s, border .5s;
+}
+button:hover{
+    background-color: #D8F3DC;
+    border: 1px solid white;
+    color: #081C15;
+    cursor: pointer;
+}
+/* card styling */
+.shuffled-cards{
+    max-width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    height: 170px;
+    width: 100px;
+    background-color: transparent;
+    margin-right: -50px;
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    cursor: pointer;
 }
 .card.is-flipped {
     transform: rotateY(-180deg);
@@ -18,13 +54,83 @@ h1 {
     position: absolute;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
+    border: solid 1px black;
     background-color: white;
+    box-shadow: 5px 5px 5px black;
     overflow: hidden;
     backface-visibility: hidden;
 }
-.card-front img{
-    max-height: 85%;
+.card-front img, .card-back img{
+    max-width: 100%;
 }
 .card-back{
     transform: rotateY(180deg);
+}
+
+.picked-cards{ 
+    display: flex;
+    flex-direction: row;
+
+}
+.card.is-picked{
+    margin: 50px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    height: 340px;
+    width: 200px;
+
+}
+
+.desc{
+    /* visibility: hidden; */
+    display: flex;
+    max-width: fit-content;
+    flex-direction: row;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+p{
+    font-size: 14px;
+    text-align: justify;
+    width: 200px;
+    padding-top: 5px;
+    margin: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+    visibility: hidden;
+    animation: fade-out ease 0.5s;
+}
+
+p.is-visible{
+    visibility: visible;
+    animation: fade-in ease 0.5s;
+}
+
+.reset{
+    visibility: hidden;
+}
+.reset.is-visible{
+    margin: 0;
+    visibility: visible;
+    animation: fade-in ease 0.5s;
+}
+
+@keyframes fade-in{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

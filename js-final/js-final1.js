@@ -231,6 +231,9 @@ function reset(pickedCardsArr){
         reset.classList.remove('is-visible');
         shuffle.classList.remove('is-hidden');
 
+        var volDisplay = document.querySelector('h2');
+        volDisplay.textContent = 'volume: 50'
+        volume = 50;;
     });
 }
 

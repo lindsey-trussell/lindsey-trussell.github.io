@@ -1,3 +1,7 @@
+*{
+    --original-pos: 0;
+    --middle-pos: 0;
+}
 body {
     background-color: #081C15;
     color: #D8F3DC;
@@ -69,16 +73,3 @@ button:hover{
 .card-back{
     transform: rotateY(180deg);
 }
-
-@keyframes fade-out{
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-@keyframes fadeIn {
- from { opacity: 0; }
- to { opacity: 1; }
-} 

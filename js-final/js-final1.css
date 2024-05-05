@@ -15,9 +15,10 @@ h2{
 }
 button{
     font-family: "bookmania", serif;
+    height: 40px;
     font-size: 16px;
     padding: 10px;
-    margin: 30px;
+    margin: 20px;
     background-color: #081C15;
     color: #D8F3DC;
     border: solid 1px #D8F3DC;

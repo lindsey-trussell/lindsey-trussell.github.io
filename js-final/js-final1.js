@@ -169,6 +169,7 @@ function loadCards(shuffled, cardContainer){
         div.innerHTML = cardDiv;
         cardContainer.appendChild(div);
     }
+    shuffleAnimation(document.querySelector('.shuffle'));
     pickCard();
 }
 
@@ -257,28 +258,51 @@ function pickCard(){
     });
 }
 
-function moveCard(pickedCard, newPos){
-    const pickedCardX = pickedCard.x;
-    const pickedCardY = pickedCard.y;
-    let newPosX = newPos.x;
-    let newPosY = newPos.y;
- 
-    let moveToXPos = (pickedCardX - newPosX) * -1;
-    let moveToYPos = (pickedCardY - newPosY) * -1;
+function shuffleAnimation(shuffle){
+var cards = document.querySelectorAll('.card');
 
-    let translateX = 'translateX' + '(' + moveToXPos + 'px' + ')';
-    let translateY = 'translateY' + '(' + moveToYPos + 'px' + ')';
-    console.log(translateX);
-    console.log(translateY);
+var firstCardPos;
+var currCardPos;
+var translation;
 
-    pickedCard.animate(
-        [
-            {transform: translateX},
-            {transform: translateY}
-        ],{
-            duration: 800,
-            easing: "ease-in-out"
-        });
+const timing = {
+    duration: 2000,
+    iterations: 1,
+};
+
+function getFirstCardPos(){
+    let firstCard = cards[0];
+
+    let position = firstCard.offsetLeft;
+    console.log(position);
+
+    return position;
+}
+
+function getCurrCardPos(card){
+    let position = card.offsetLeft;
+    console.log(position);
+
+    return position;
+}
+
+shuffle.addEventListener( 'click' , function(){
+    firstCardPos = getFirstCardPos();
+    console.log(firstCardPos);
+
+    [...cards].forEach((card=> {
+        currCardPos = getCurrCardPos(card);
+        translation = currCardPos-firstCardPos;
+
+        var cardSpread = card.animate([
+            { transform: 'translateX(' + ' -' + translation + 'px)', offset: 0.5 },
+            { transform: 'translateX(0px)', offset: 1 },],
+            timing);
+
+        cardSpread.play();
+    }));
+});
+
 } 
 
 var cardContainer = document.querySelector('.shuffled-cards');

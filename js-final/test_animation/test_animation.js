@@ -1,29 +1,45 @@
-var cards = document.querySelectorAll('card');
-var cardContainer = document.querySelector('.shuffled-cards');
-var shuffle = document.querySelector('shuffle');
+var cards = document.querySelectorAll('.card');
+var shuffle = document.querySelector('.shuffle');
 
 var firstCardPos;
 var currCardPos;
 var translation;
-var cardsFinalPos = [];
 
 const timing = {
     duration: 2000,
     iterations: 1,
 };
 
-var cardTranslate = [
-    { transform : 'translateX('+ translation + ')'},
-];
+function getFirstCardPos(){
+    let firstCard = cards[0];
+
+    let position = firstCard.offsetLeft;
+    console.log(position);
+
+    return position;
+}
+
+function getCurrCardPos(card){
+    let position = card.offsetLeft;
+    console.log(position);
+
+    return position;
+}
 
 shuffle.addEventListener( 'click' , function(){
-    firstCardPos = shuffle.firstChild.x;
+    firstCardPos = getFirstCardPos();
     console.log(firstCardPos);
 
     [...cards].forEach((card=> {
-        currCardPos = card.x;
+        currCardPos = getCurrCardPos(card);
+        card.setAttribute('translation', translation);
         translation = currCardPos-firstCardPos;
 
-        card.animate([{transform: 'translate(' + translation + ')'},],{timing,});
+        var cardSpread = card.animate([
+            { transform: 'translateX(' + ' -' + translation + 'px)', offset: 0.5 },
+            { transform: 'translateX(0px)', offset: 1 },],
+            timing);
+
+        cardSpread.play();
     }));
 });

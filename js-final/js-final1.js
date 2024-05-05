@@ -134,6 +134,7 @@ const tarot = [
     ];
 
 function shuffleCards(shuffled, tarot){
+    reset();
     console.log('shuffling');
     if(shuffled.length <1){
         for(let card of tarot){
@@ -147,6 +148,7 @@ function shuffleCards(shuffled, tarot){
 }
 
 function loadCards(shuffled, cardContainer){
+    reset();
     var pickedCards = document.querySelector('.picked-cards');
     if(pickedCards.childElementCount > 0){
         return;
@@ -169,7 +171,7 @@ function loadCards(shuffled, cardContainer){
         div.innerHTML = cardDiv;
         cardContainer.appendChild(div);
     }
-    shuffleAnimation(document.querySelector('.shuffle'));
+    shuffleAnimation();
     pickCard();
 }
 
@@ -205,9 +207,10 @@ function flipCard(pickedCards){
 }
 
 function reset(pickedCardsArr){
-    var shuffledCards = document.querySelector('.shuffled-cards');
+    console.log('resetting')
     var reset = document.querySelector('.reset');
-        reset.classList.add('is-visible');
+    var shuffledCards = document.querySelector('.shuffled-cards');
+    var shuffle = document.querySelector('.shuffle');
 
     reset.addEventListener('click', function(){
         for(let card of pickedCardsArr){
@@ -226,6 +229,8 @@ function reset(pickedCardsArr){
         loadCards(shuffled, shuffledCards);
 
         reset.classList.remove('is-visible');
+        shuffle.classList.remove('is-hidden');
+
     });
 }
 
@@ -251,48 +256,34 @@ function pickCard(){
 
                     flipCard(pickedCardsArr);
                 }
+                else if(pickedCardsArr.length >= 0){
+                    var reset = document.querySelector('.reset');
+                    reset.classList.add('is-visible');
+                }
                 else{
                     return;
                 }
+                var shuffle = document.querySelector('.shuffle');
+                shuffle.classList.add('is-hidden');
         });
     });
 }
 
-function shuffleAnimation(shuffle){
-var cards = document.querySelectorAll('.card');
+function shuffleAnimation(){
+    reset();
+    var cards = document.querySelectorAll('.card');
 
-var firstCardPos;
-var currCardPos;
-var translation;
-
-const timing = {
-    duration: 2000,
-    iterations: 1,
-};
-
-function getFirstCardPos(){
-    let firstCard = cards[0];
-
-    let position = firstCard.offsetLeft;
-    console.log(position);
-
-    return position;
-}
-
-function getCurrCardPos(card){
-    let position = card.offsetLeft;
-    console.log(position);
-
-    return position;
-}
-
-shuffle.addEventListener( 'click' , function(){
-    firstCardPos = getFirstCardPos();
+    var firstCardPos = cards[0].offsetLeft;
     console.log(firstCardPos);
 
+    const timing = {
+        duration: 2000,
+        iterations: 1,
+    };
+
     [...cards].forEach((card=> {
-        currCardPos = getCurrCardPos(card);
-        translation = currCardPos-firstCardPos;
+        let currCardPos = card.offsetLeft;
+        let translation = currCardPos-firstCardPos;
 
         var cardSpread = card.animate([
             { transform: 'translateX(' + ' -' + translation + 'px)', offset: 0.5 },
@@ -301,8 +292,6 @@ shuffle.addEventListener( 'click' , function(){
 
         cardSpread.play();
     }));
-});
-
 } 
 
 var cardContainer = document.querySelector('.shuffled-cards');
@@ -322,5 +311,6 @@ window.onload = (event => {
         console.log(shuffled);
         
         loadCards(shuffled, cardContainer);
+        shuffleAnimation();
     });
 });

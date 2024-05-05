@@ -111,11 +111,22 @@ p.is-visible{
 
 .reset{
     visibility: hidden;
+    animation: fade-out ease 0.5s;
 }
 .reset.is-visible{
     margin: 0;
     visibility: visible;
     animation: fade-in ease 0.5s;
+}
+
+.shuffle{
+    visibility: visible;
+    opacity: 1;
+    animation: fade-in ease 0.5s;
+}
+.shuffle.is-hidden{
+    visibility: hidden;
+    animation: fade-out ease 0.5s;
 }
 
 @keyframes fade-in{

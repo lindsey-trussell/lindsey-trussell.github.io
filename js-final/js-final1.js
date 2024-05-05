@@ -49,7 +49,7 @@ const tarot = [
                     },
                     {
                         "name": "Strength",
-                        "description": "The Strength card represents courage, the fortitude of your heart, and your ability to withstand anything life hands you. Be reminded that you're strong enough to handle whatever you are facing and will come out of it with even more power than you had before. +100 to volume",
+                        "description": "The Strength card represents courage, the fortitude of your heart, and your ability to withstand anything life hands you. Be reminded that you're strong enough to handle whatever you are facing and will come out of it with even more power than you had before.",
                         "value": "100",
                         "img": "img/strength.jpg"
                     },
@@ -190,10 +190,21 @@ function setVolume(card){
     volDisplay.textContent = 'volume: ' + volume;
 }
 
-function flipCard(pickedCards){
-
-    [...pickedCards].forEach((card)=>{
+function flipCard(card){
     card.addEventListener( 'click', function() {
+        console.log('flipping card');
+        if(card.getAttribute('id') === 'Death'){
+            card.classList.add('is-flipped');
+            var desc = document.querySelector('#' + card.getAttribute('id') + '-desc');
+            desc.classList.add('is-visible');
+
+            setTimeout(()=> {
+                alert('you picked death');
+                window.close();
+            }, '2000')
+            return;
+        }
+
         card.classList.add('is-flipped');
 
         var desc = document.querySelector('#' + card.getAttribute('id') + '-desc');
@@ -201,9 +212,8 @@ function flipCard(pickedCards){
 
         console.log('oh shit here we are');
         setVolume(card);
-        });
-        reset(pickedCards);
     });
+    reset(card.parentElement.children);
 }
 
 function reset(pickedCardsArr){
@@ -213,8 +223,10 @@ function reset(pickedCardsArr){
     var shuffle = document.querySelector('.shuffle');
 
     reset.addEventListener('click', function(){
-        for(let card of pickedCardsArr){
-            card.remove();
+        if(pickedCardsArr){
+            for(let card of pickedCardsArr){
+                card.remove();
+            }
         }
 
         var descContainer = document.querySelector('.desc');
@@ -257,7 +269,7 @@ function pickCard(){
 
                     descContainer.appendChild(paragraph);
 
-                    flipCard(pickedCardsArr);
+                    flipCard(card);
                 }
                 else if(pickedCardsArr.length >= 0){
                     var reset = document.querySelector('.reset');

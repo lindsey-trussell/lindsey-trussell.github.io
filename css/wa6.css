@@ -1,4 +1,9 @@
-  /* general styling */
+
+@font-face {
+  font-family: 'Bookmania'; /*a name to be used later*/
+  src: url('https://use.typekit.net/bfv8nan.css'); /*URL to font*/
+}
+/* general styling */
   html{
     font-family: "bookmania", serif;
     font-weight: 700;
